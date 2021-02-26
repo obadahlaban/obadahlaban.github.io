@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("background.png");
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+header {
+    background-image: url("bannerbg.png");
+    background-repeat: repeat;
+}
+.bigbox {
+    overflow: auto;
+    border-radius: 20px;
+    border: 4px gray solid;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+}
+
+#banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-column {
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+
+}
+.right-column dl {
+    margin-left: 10px;
+}
+
+.right-column img {
+    width: 100%;
+}
+
+.left-column {
+    float: left;
+    width: 550px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow: 3px 3px #999999;
+}
+
+article{
+   padding: 15px 0;
+}
+article div:nth-child(1) {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px gray solid;
+    background-color: #E8DC9B;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.people {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-style: italic;
+
+}
+
+.imagesinbox {
+    float: left;
+    margin-right:  5px;
+
+
+}
+
+
+dt {
+    font-weight: bold;
+    margin-top: 10pt;
+}
+
+
+.percentage {
+    color: red;
+    font-weight: bold;
+    font-size: 48pt;
+    background-image: url("rbg.png");
+    background-repeat: repeat;
+}
+
+.left-column-tag {
+    overflow: auto;
+    column-count:2;
+    column-gap: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+#pages{
+    background-color: #A2B964;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+}
+#validator{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+
