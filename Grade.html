@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve grade</title>
+</head>
+<body>
+<h1>Retrieve your grade</h1>
+<hr>
+<br>
+
+
+<form action="http://mumstudents.org/params.php">
+    <p>Name: <input type="text" name="studentName" /></p>
+
+    <p>Student ID:<input type="text" name="studentId" /></p>
+    <p>
+        Semester:
+        <label>
+            <input type="radio" name="entry" value="august" checked required/> AUGUST 2020
+
+
+            <input type="radio" name="entry" value="november" /> NOV 2020
+        </label>
+
+    </p>
+    <p>
+        <label>Courses:
+
+        <select id="assignments" name="assignment">
+            <option value="fpp" selected>FPP</option>
+            <option value="mpp">MPP</option>
+            <option value="wap">WAP</option>
+            <option value="algo">Algo</option>
+        </select>
+        </label>
+    </p>
+
+    <p>
+        <label>
+        <input type="checkbox" id="validate" name="validate">
+            Iam only looking my own grade.</label>
+    </p>
+    <input type="submit" value="Submit"  />
+</form>
+<div> <a id=home href="index.html"><strong>Home</strong></a></div>
+<div id="validator">
+    <a href='https://validator.w3.org/check?uri=referer'>
+        <img class='validators' src='w3c-html.png' alt="html validator">
+    </a>
+    <a href='https://jigsaw.w3.org/css-validator/check/referer'>
+        <img class='CSS validators' src='w3c-css.png' alt="CSS validator">
+    </a>
+
+</div>
+</body>
+</html>
