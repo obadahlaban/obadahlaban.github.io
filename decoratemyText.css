@@ -1,0 +1,20 @@
+.box{
+    border: solid 2px black;
+    padding: 5px 15px;
+    margin: 15px 5px;
+;
+}
+.box-border{
+    font-weight: bold;
+    width: max-content;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background: white;
+    padding: 0px 5px;
+}
+h1{
+    font-style: italic;
+}
+#textarea {
+    font-size: 12px;
+}
