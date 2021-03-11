@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASCII Animation Viewer</title>
+    <link href="ascii.css" type="text/css" rel="stylesheet" />
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
+</head>
+<body>
+<h1>CS472: ASCII Animation Viewer</h1>
+<label>
+    <textarea id="timer-id-container" style="display: none"></textarea>
+</label>
+<label>
+    <textarea id="animation-area" rows="20" cols="80"></textarea>
+</label>
+<div class="row justify-center">
+    <div class="control">
+        <h4>Play Controls:</h4>
+        <div class="row justify-center">
+            <button id="start-button" onclick="startAnimation()"> Start</button>
+            <button id="stop-button" onclick="stopAnimation()" disabled> Stop</button>
+        </div>
+    </div>
+    <div class="control">
+        <h4>Animation:</h4>
+        <label>
+            <select id="animation-selector">
+                <option value="Blank">Blank</option>
+                <option value="Custom">Custom</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Juggler">Juggler</option>
+                <option selected value="Bike">Bike</option>
+                <option value="Dive">Dive</option>
+            </select>
+        </label>
+    </div>
+    <div class="control">
+        <h4>Size:</h4>
+        <label>
+            <select id="size-selector" onchange="changeSize()">
+                <option selected value="7pt">Tiny (7pt)</option>
+                <option value="10pt">Small (10pt)</option>
+                <option value="12pt">Medium (12pt)</option>
+                <option value="16pt">Large (16pt)</option>
+                <option value="24pt">Extra Large (24pt)</option>
+                <option value="32pt">XXL (32pt)</option>
+            </select>
+        </label>
+    </div>
+    <div class="control">
+        <h4>Speed:</h4>
+        <label>
+            <input id="speed-selector" onchange="changeSpeed()" type="checkbox">
+            Turbo
+        </label>
+    </div>
+</div>
+
+</body>
+</html>

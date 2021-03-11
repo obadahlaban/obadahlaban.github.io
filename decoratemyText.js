@@ -2,6 +2,7 @@ window.onload=function (){
     const textArea=document.getElementById("textarea");
     textArea.style.fontSize="12pt";
     textArea.value="Obadah\n Laban\n";
+
 }
 
 
