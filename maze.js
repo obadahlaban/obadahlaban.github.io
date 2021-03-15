@@ -6,12 +6,17 @@ $(document).ready(function(){
             $("#status").text("You Win :)");
             $(".boundary").off("mouseenter");
             $("#maze").off("mouseleave");
+
         }
 
         function loser() {
             $(".boundary").addClass("youlose");
             $("#status").text("You Lose :(");
+            $("#end").off("mouseenter");
+
+
         }
+
 
 
         $(".boundary").removeClass("youlose");
