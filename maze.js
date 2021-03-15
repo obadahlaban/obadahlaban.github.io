@@ -14,10 +14,9 @@ $(document).ready(function(){
         }
 
 
-        // reset
         $(".boundary").removeClass("youlose");
 
-        // start game
+
         $("#status").text("started.....");
 
 
