@@ -197,5 +197,8 @@ function showMovables() {
         var wb = {posX: wbX, posY: wbY};
 
         setWBPosition({posX: $(this).css("left"), posY: $(this).css("top")});
+        setPosition($(this),wb);
+        refreshPositions();
+        showMovables();
     });
 }
