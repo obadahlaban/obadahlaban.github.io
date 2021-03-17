@@ -53,7 +53,6 @@ function getElement(position){
     var found = null;
     $("#puzzlearea div").each(function(idx){
 
-        //console.log( parseInt($(this).css("top")) + "==" + position.posY + ", " + parseInt($(this).css("left")) + "==" +  position.posX);
         if(parseInt($(this).css("top")) == parseInt(position.posY) && parseInt($(this).css("left")) == parseInt(position.posX)){
             found = $(this);
             return false;
@@ -70,15 +69,15 @@ function refreshPositions(){
     var above = {posX: wbX, posY: wbY-pieceY};
     var below = {posX: wbX, posY: wbY+pieceY};
     specialPositions = {
-        top_left: [right, below ],		//right, below
-        top_right: [left, below ],		//left, below
-        bottom_right: [left, above ],		//left, above
-        bottom_left: [right, above ],		//right, above
-        right: [left, above, below ],		//left, above, below
-        left: [right, above, below ],		//right, above, below
-        top: [right, left, below ],		//right, left, below
-        bottom: [right, left, above ],		//right, left, above
-        center: [right, left, below , above],		//right, left, above, below
+        top_left: [right, below ],
+        top_right: [left, below ],
+        bottom_right: [left, above ],
+        bottom_left: [right, above ],
+        right: [left, above, below ],
+        left: [right, above, below ],
+        top: [right, left, below ],
+        bottom: [right, left, above ],
+        center: [right, left, below , above],
     };
 }
 
@@ -98,39 +97,39 @@ function shuffle(){
         setPosition(elements[idx],{posX:wbX, posY: wbY});
         setWBPosition(positions[idx]);
     }
-    //if the whitebox is on the top left corner
+
     if(wbX == 0 && wbY == 0){
         move(specialPositions.top_left);
     }
-    //if the whitebox is on the top right corner
+
     else if(wbX == (puzzleSizeX - pieceX) && wbY == 0){
         move(specialPositions.top_right);
     }
-    //if the whitebox is on the bottom left corner
+
     else if(wbX == 0 && wbY == (puzzleSizeY - pieceY)){
         move(specialPositions.bottom_left);
     }
-    //if the whitebox is on the bottom right corner
+
     else if(wbX == (puzzleSizeX - pieceX) && wbY == (puzzleSizeY - pieceY)){
         move(specialPositions.bottom_right);
     }
-    //if the whitebox is on the right column
+
     else if(wbX == (puzzleSizeX - pieceX)){
         move(specialPositions.right);
     }
-    //if the whitebox is on the left column
+
     else if(wbX == 0){
         move(specialPositions.left);
     }
-    //if the whitebox is on the top row
+
     else if(wbY == 0){
         move(specialPositions.top);
     }
-    //if the whitebox is on the bottom row
+
     else if(wbY == (puzzleSizeY - pieceY)){
         move(specialPositions.bottom);
     }
-    //if the whitebox is in other position
+
     else{
         move(specialPositions.center);
     }
@@ -151,48 +150,44 @@ function showMovables() {
         }
     }
 
-    //if the whitebox is on the top left corner
     if (wbX == 0 && wbY == 0) {
         show(specialPositions.top_left);
     }
-    //if the whitebox is on the top right corner
+
     else if (wbX == (puzzleSizeX - pieceX) && wbY == 0) {
         show(specialPositions.top_right);
     }
-    //if the whitebox is on the bottom left corner
+
     else if (wbX == 0 && wbY == (puzzleSizeY - pieceY)) {
         show(specialPositions.bottom_left);
     }
-    //if the whitebox is on the bottom right corner
+
     else if (wbX == (puzzleSizeX - pieceX) && wbY == (puzzleSizeY - pieceY)) {
         show(specialPositions.bottom_right);
     }
-    //if the whitebox is on the right column
+
     else if (wbX == (puzzleSizeX - pieceX)) {
         show(specialPositions.right);
     }
-    //if the whitebox is on the left column
+
     else if (wbX == 0) {
         show(specialPositions.left);
     }
-    //if the whitebox is on the top row
+
     else if (wbY == 0) {
         show(specialPositions.top);
     }
-    //if the whitebox is on the bottom row
+
     else if (wbY == (puzzleSizeY - pieceY)) {
         show(specialPositions.bottom);
     }
-    //if the whitebox is in other position
     else {
         show(specialPositions.center);
     }
 
-    //$(".movablepiece").unbind("click");
 
     $(".movablepiece").click(function () {
 
-        //$(".movablepiece").each(function(){$(this).removeClass("movablepiece")});
 
         var wb = {posX: wbX, posY: wbY};
 
